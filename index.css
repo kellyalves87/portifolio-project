@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./assets/web-design.jpg');
+  background-size: 100vw 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+  font-size: 0.75em;
+}
+
+@media (min-width: 320px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 2em;
+  }
+}
+
+#scrollToTop {
+  padding: 4px 8px;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  color: #033E47;
+  border: 1px solid #033E47;
+  font-size: 0.8em;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+#scrollToTop:hover,
+#scrollToTop:active {
+  opacity: 0.8;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.menu {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li,
+.knowledge li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #D88048;
+  transition: color 0.5s;
+  font-size: 0.7em;
+}
+
+.menu a:active,
+.menu a:hover {
+  color: #033E47;
+}
+
+header .title,
+header .subtitle {
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  color: #033E47;
+  text-align: center;
+}
+
+header .subtitle {
+  white-space: nowrap; /* para a animação ficar apenas em 1 linha */
+  margin: 0 auto;
+  font-weight: 300;
+  animation: typing 4s steps(25) 0.5s normal;
+  overflow: hidden;
+}
+
+/* animação do efeito de digitação */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18em;
+  }
+}
+
+header .subtitle:after {
+  content: "|";
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+/* animação do cursor piscando */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+header .arrow-down {
+  position: absolute;
+  bottom: 50px;
+  display: block;
+}
+
+header .fa-angle-double-down {
+  color: whitesmoke;
+  font-size: 1.5em;
+  opacity: 0.5;
+  animation: rollover 1s ease infinite;
+}
+
+@keyframes rollover {
+  to {
+    opacity: 0.1;
+    transform: translateY(20px);
+  }
+}
+
+.about,
+.contact {
+  padding: 4em;
+  height: 100vh;
+}
+
+.about {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #D9A78B;
+}
+
+@media (min-width: 768px) {
+  .about-content,
+  .knowledge-content {
+    max-width: 50%;
+  }
+}
+
+.about .title,
+.about p,
+.about a {
+  color: #033E47;
+  text-align: right;
+}
+
+.about .title,
+.knowledge .title {
+  color: #033E47;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.about p,
+.knowledge p {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 1em 0;
+  color: #033E47;
+}
+
+.knowledge {
+  display: flex;
+  min-height: 100vh;
+  padding: 4em;
+  align-items: center;
+  background-color: #F4BDA0;
+}
+
+.knowledge li {
+  float: left;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 4px 16px;
+  margin: 16px 16px 0 0;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: #033E47;
+  color: #033E47;
+}
+
+.contact {
+  color: #033E47;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #CDBFBC;
+}
+
+.contact .title,
+.contact .icons {
+  font-weight: 400;
+  margin-bottom: 1em;
+  padding: inherit;
+}
+
+@media (max-width: 414px) {
+  .contact .grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1em;
+  }
+}
+
+.contact a {
+  color: #033E47;
+  font-size: 3em;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+footer {
+  height: 40px;
+  margin-top: -40px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.6em;
+}
