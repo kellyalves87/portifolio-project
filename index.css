@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url('./assets/web-design.jpg');
+  background-image: url('./assets/setup-girl.jpg');
   background-size: 100vw 100vh;
   font-family: 'Source Sans Pro', sans-serif;
   height: 100vh;
@@ -35,8 +35,8 @@ body {
   position: fixed;
   bottom: 8px;
   right: 8px;
-  color: #033E47;
-  border: 1px solid #033E47;
+  color: #313366;
+  border: 1px solid #313366;
   font-size: 0.8em;
   opacity: 0.8;
   transition: opacity 0.5s;
@@ -68,7 +68,8 @@ nav.menu {
 }
 
 .menu li,
-.knowledge li {
+.knowledge li,
+.projects li {
   list-style: none;
 }
 
@@ -76,24 +77,24 @@ nav.menu {
   display: block;
   text-decoration: none;
   padding: 20px;
-  color: #D88048;
+  color: #313366;
   transition: color 0.5s;
   font-size: 0.7em;
 }
 
 .menu a:active,
 .menu a:hover {
-  color: #033E47;
+  color: #E9C2C5;
 }
 
 header .title,
 header .subtitle {
-  color: white;
+  color: #313366;
   text-align: center;
 }
 
 footer p {
-  color: #033E47;
+  color: #313366;
   text-align: center;
 }
 
@@ -137,7 +138,7 @@ header .arrow-down {
 }
 
 header .fa-angle-double-down {
-  color: whitesmoke;
+  color: black;
   font-size: 1.5em;
   opacity: 0.5;
   animation: rollover 1s ease infinite;
@@ -151,7 +152,8 @@ header .fa-angle-double-down {
 }
 
 .about,
-.contact {
+.contact
+.projects {
   padding: 4em;
   height: 100vh;
 }
@@ -160,12 +162,13 @@ header .fa-angle-double-down {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #D9A78B;
+  background-color: #D9B8BE;
 }
 
 @media (min-width: 768px) {
   .about-content,
-  .knowledge-content {
+  .knowledge-content,
+  .projects-content {
     max-width: 50%;
   }
 }
@@ -173,23 +176,37 @@ header .fa-angle-double-down {
 .about .title,
 .about p,
 .about a {
-  color: #033E47;
+  color: #313366;
   text-align: right;
 }
 
 .about .title,
-.knowledge .title {
-  color: #033E47;
+.knowledge .title,
+.projects .title {
+  color: #313366;
   font-weight: 400;
   margin-bottom: 1em;
 }
 
-.about p,
+.about p {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 1em 0;
+  color: #313366;
+}
+
 .knowledge p {
   font-weight: 300;
   font-size: 0.8em;
   margin: 1em 0;
-  color: #033E47;
+  color: #313366;
+}
+
+.projects p {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 1em 0;
+  color: #313366;
 }
 
 .knowledge {
@@ -197,7 +214,15 @@ header .fa-angle-double-down {
   min-height: 100vh;
   padding: 4em;
   align-items: center;
-  background-color: #F4BDA0;
+  background-color: #F2C9D1;
+}
+
+.projects {
+  display: flex;
+  min-height: 100vh;
+  padding: 4em;
+  align-items: center;
+  background-color: #F2E4E8;
 }
 
 .knowledge li {
@@ -210,17 +235,33 @@ header .fa-angle-double-down {
   border-width: 2px;
   border-style: solid;
   border-radius: 8px;
-  border-color: #033E47;
-  color: #033E47;
+  border-color: #313366;
+  color: #313366;
+}
+
+.projects li {
+  float: left;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 4px 16px;
+  margin: 16px 16px 0 0;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
+  border-color: #313366;
+  color: #313366;
 }
 
 .contact {
-  color: #033E47;
+  color: #313366;
   display: flex;
+  min-height: 100vh;
+  padding: 4em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #CDBFBC;
+  background-color: #FEE1DD;
 }
 
 .contact .title,
@@ -239,7 +280,7 @@ header .fa-angle-double-down {
 }
 
 .contact a {
-  color: #033E47;
+  color: #313366;
   font-size: 3em;
   text-decoration: none;
   transition: text-shadow 0.2s;
